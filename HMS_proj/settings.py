@@ -40,7 +40,14 @@ INSTALLED_APPS = [
     #custom apps
     "hotel",
     "user_auth",
-    "user_dashboard"
+    "user_dashboard",
+    "import_export",
+    "crispy_forms",
+    "mathfilters",
+    "ckeditor_uploader",
+    "ckeditor",
+    "taggit",
+    "anymail"
 ]
 
 MIDDLEWARE = [
