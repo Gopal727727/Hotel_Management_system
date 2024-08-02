@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -44,11 +45,12 @@ INSTALLED_APPS = [
     "hotel",
     "user_auth",
     "user_dashboard",
+    #third party apps
     "import_export",
     "crispy_forms",
     "mathfilters",
     "ckeditor_uploader",
-    "ckeditor",
+    "django_ckeditor_5",
     "taggit",
     "anymail"
 ]
