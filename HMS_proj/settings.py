@@ -70,7 +70,7 @@ ROOT_URLCONF = "HMS_proj.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR/'Templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -131,7 +131,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR/'staticfiles'
+STATICFILES_DIRS = [BASE_DIR/'static']
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR/'media'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -186,7 +192,7 @@ JAZZMIN_SETTINGS = {
     },
 
 
-    "show_ui_builder" : True
+    "show_ui_builder" : False
 }
 
 JAZZMIN_UI_TWEAKS = {
@@ -209,8 +215,8 @@ JAZZMIN_UI_TWEAKS = {
     "sidebar_nav_compact_style": False,
     "sidebar_nav_legacy_style": False,
     "sidebar_nav_flat_style": False,
-    "theme": "cyborg",
-    "dark_mode_theme": "cyborg",
+    "theme": "lux",
+    "dark_mode_theme": "none",
     "button_classes": {
         "primary": "btn-primary",
         "secondary": "btn-secondary",
@@ -220,3 +226,5 @@ JAZZMIN_UI_TWEAKS = {
         "success": "btn-success"
     }
 }
+
+AUTH_USER_MODEL = "user_auth.User" 
